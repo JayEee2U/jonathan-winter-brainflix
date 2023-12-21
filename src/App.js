@@ -6,7 +6,7 @@ import axios from 'axios';
 
 function App() {
   return (
-    <Header/>
+    <Header />
 
   );
 }
