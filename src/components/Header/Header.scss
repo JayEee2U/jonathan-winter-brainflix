@@ -1,5 +1,8 @@
 .NavBar {
-    padding: 15px;
+    padding: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
 }
 
 
@@ -7,7 +10,7 @@
 header {
 
     input {
-        width: 75%;
+        width: 68vw;
         height: 35px;
         border-radius: 5px;
         border: 1px solid rgba(0, 0, 0, 0.2);
@@ -20,8 +23,8 @@ header {
     }
 
     .logo-header {
-        display: block;
         height: 25px;
+        width: 90vw;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 20px;
@@ -35,10 +38,14 @@ header {
         float: right;
     }
 
+    .avatar-div {
+        width: 18vw;
+    }
+
     button {
         text-align: center;
         text-decoration: none;
-        width: 100%;
+        width: 90vw;
         height: 40px;
         margin-top: 20px;
         margin-bottom: 20px;
@@ -54,16 +61,50 @@ header {
 
 @media screen  and (min-width: 768px) {
     
-    button {
-        max-width: 25%;
-    }
+//     button {
+//         margin-top: 15px;
+//         max-width: 25%;
+//     }
     
     .NavBar {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 
+    header {
+
+        .logo-header {
+            width: 113px;
+            margin-right: 50px;
+        }
+
+        input {
+            width: 25vw;
+        }
+
+        button {
+            width: 25vw;
+        }
+
+        .avatar-div {
+            order: 4;
+
+        }
+
+        .search-bar {
+            margin-left: 5vw;
+        }
+
+        .upload-bar {
+            margin-left: 5vw;
+             
+            button {
+                margin-top: 0;
+            }
+        }
+    }
+
+    
+       
     
 }
 

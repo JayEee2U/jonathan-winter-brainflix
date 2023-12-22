@@ -9,13 +9,16 @@ function Header() {
                 <div>
                     <img className='logo-header' src={Brainflix} alt="Brainflix logo" />
                 </div>
-                <div>
-                    <input type="text"  name="name" placeholder='     Search'></input>
+                <div  className='search-bar'>
+                    <input type="text"  name="name" placeholder='     Search'></input>    
+                </div>
+                <div className='avatar-div'>
                     <img  className="avatar" src={MohanM} alt="Mohan Muruge" />
                 </div>
+                <div className='upload-bar'>
                 <button type='button'>UPLOAD</button>
+                </div>
             </div>
-          
         </header>
     );
 }
