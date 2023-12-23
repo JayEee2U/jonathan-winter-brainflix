@@ -1,3 +1,5 @@
+@use '../../styles/partials/_partials.scss';
+
 .NavBar {
     padding: 5vw;
     display: flex;
@@ -32,9 +34,7 @@ header {
     }
 
     .avatar {      
-        height: 35px;
-        width: 35px;
-        border-radius: 50%;
+        @include partials.avatar;
         float: right;
     }
 
@@ -102,9 +102,7 @@ header {
             }
         }
     }
-
-    
-       
+ 
     
 }
 

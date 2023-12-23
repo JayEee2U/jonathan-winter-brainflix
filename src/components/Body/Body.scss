@@ -1,11 +1,50 @@
+@use '../../styles/partials/_partials';
+
+
 .container-image {
     object-fit: contain;
     width: 100vw;
     height: 20%;
+}
 
-    .image_Red-Cow {
-        width: 100%;
-        height: 100%;  
-        // filter: opacity(200%);
+.image_Red-Cow {
+    width: 100%;
+    height: 100%;  
+    
+}
+
+.divider {
+    border-bottom:  1px solid #E1E1E1;
+    width:  90vw;
+    height: 1px;
+    margin: 0px auto;
+}
+    
+.avatar {
+    @include partials.avatar;
+
+}
+
+h3.nextHeader {
+    @include partials.heading;
+}
+
+
+.videoSection {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5vw;
+
+
+    .nextVideoDiv {
+        
+    }
+    
+    .nextVideoImage {
+        height: 80px;
+        width: 75px;
+        border-radius: 8%;
     }
 }
+
+
