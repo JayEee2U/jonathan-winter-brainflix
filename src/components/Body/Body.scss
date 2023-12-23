@@ -13,6 +13,18 @@
     
 }
 
+.container-commenter {
+    @include partials.padding;
+}
+
+.video-commentary {
+    @include partials.padding;
+
+    p {
+        margin: 0;
+    }
+}
+
 .divider {
     border-bottom:  1px solid #E1E1E1;
     width:  90vw;
@@ -29,21 +41,30 @@ h3.nextHeader {
     @include partials.heading;
 }
 
+.commentSection {
+    @include partials.padding;
+}
+
 
 .videoSection {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    padding: 5vw;
+    @include partials.padding;
 
 
     .nextVideoDiv {
-        
+        height: 80%;
     }
     
     .nextVideoImage {
-        height: 80px;
-        width: 75px;
+        height: 100%;
+        width: 40%;
         border-radius: 8%;
+    }
+
+    .nextVideoElement {
+       
     }
 }
 

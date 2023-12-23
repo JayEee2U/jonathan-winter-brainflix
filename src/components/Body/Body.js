@@ -18,21 +18,23 @@ function Body() {
             <h1>{video.title}</h1>
             <div className='divider'>&nbsp;</div>
         </div>
-        <div>
+        <div className='container-commenter'>
             <div className='commentator'>
                 <h3>By {video.channel}</h3>
             </div>
             <div>
-                <h3>Text</h3>
+                <h3>{video.timestamp}</h3>
             </div>
             <div>
                 <img src={upload} alt='' />
             </div>
             <div>
                 <img src={likes} alt='' />
-                <div className='divider'>&nbsp;</div>
+                
             </div>
+            
          </div>
+         <div className='divider'>&nbsp;</div>
         <div className='video-commentary'>
             <p className='video-commentary__paragraph'>{video.description}
             </p>
@@ -79,10 +81,10 @@ function Body() {
                  <img className='nextVideoImage' src={v.image} alt=''/>
                 </div>
             <div>
-                <h3>{v.title}</h3>
+                <h3 className='nextVideoElement'>{v.title}</h3>
             </div>
             <div>
-                <p>{v.channel}</p>
+                <h3 className='nextVideoElement'>{v.channel}</h3>
             </div>
         </div>
             )

@@ -1,7 +1,7 @@
 @use '../../styles/partials/_partials.scss';
 
 .NavBar {
-    padding: 5vw;
+    @include partials.padding;
     display: flex;
     flex-wrap: wrap;
     width: 90%;
