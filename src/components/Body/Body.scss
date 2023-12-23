@@ -25,6 +25,15 @@
     }
 }
 
+.newCommentSection {
+    @include partials.padding;
+
+    .button {
+        @include partials.button;
+        background-image: url(../../assets/images/add_comment.svg);
+    }
+}
+
 .divider {
     border-bottom:  1px solid #E1E1E1;
     width:  90vw;
@@ -61,6 +70,7 @@ h3.nextHeader {
         height: 100%;
         width: 40%;
         border-radius: 8%;
+        float: left;
     }
 
     .nextVideoElement {

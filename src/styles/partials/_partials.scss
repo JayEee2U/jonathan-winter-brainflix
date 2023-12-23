@@ -11,3 +11,10 @@
     padding: 5vw;
 
 }
+
+@mixin button {
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #0095FF;
+    color: #FFFFFF;
+}

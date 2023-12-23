@@ -39,22 +39,24 @@ function Body() {
             <p className='video-commentary__paragraph'>{video.description}
             </p>
         </div>
-        <div>
-        <div className='avatar-div'>
-                    <img  className="avatar" src={MohanM} alt="Mohan Muruge" />
-                </div>
-        </div>
-        <div>
-            <h3 className='nextHeader'>JOIN THE CONVERSATION</h3>
-        </div>
-        <div>
-            <input type='text' placeholder='Add a new comment'></input>
-        </div>
-        <div>
-            <button type='button'>COMMENT</button>
-            <div className='divider'>&nbsp;</div>
-        </div>
 
+        <div className='newCommentSection'>
+            <div>
+            <div className='avatar-div'>
+                        <img  className="avatar" src={MohanM} alt="Mohan Muruge" />
+                    </div>
+            </div>
+            <div>
+                <h3 className='nextHeader'>JOIN THE CONVERSATION</h3>
+            </div>
+            <div>
+                <input type='text' placeholder='Add a new comment'></input>
+            </div>
+            <div className='button'>
+                <button type='button'>COMMENT</button>
+            </div>
+        </div>
+        <div className='divider'>&nbsp;</div>
         {video.comments.map( c => 
                 <div className='commentSection'>
                     <div>
