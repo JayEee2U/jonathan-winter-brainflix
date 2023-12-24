@@ -17,4 +17,17 @@
     background-position: left center;
     background-color: #0095FF;
     color: #FFFFFF;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@mixin input {
+    border-radius: 5px;
+    background-color: #E1E1E1;
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }

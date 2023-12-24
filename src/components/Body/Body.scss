@@ -28,9 +28,24 @@
 .newCommentSection {
     @include partials.padding;
 
-    .button {
+    button {
         @include partials.button;
         background-image: url(../../assets/images/add_comment.svg);
+        width: 70vw;
+    }
+
+    .button {
+        margin-left: 60px;
+    }
+
+    input {
+        @include partials.input;
+        width: 65vw;
+        height: 140px;
+    }
+
+    .input {
+        margin-left: 65px;
     }
 }
 

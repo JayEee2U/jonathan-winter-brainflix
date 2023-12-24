@@ -12,12 +12,10 @@
 header {
 
     input {
+        @include partials.input;
         width: 68vw;
         height: 35px;
-        border-radius: 5px;
-        border: 1px solid rgba(0, 0, 0, 0.2);
         background-image: url(../../assets/images/search.svg);
-        background-color: #E1E1E1;
         background-repeat: no-repeat;
         background-position: left center;
         padding-left: 10px;
@@ -44,14 +42,7 @@ header {
 
     button {
         @include partials.button;
-        text-align: center;
-        text-decoration: none;
         width: 90vw;
-        height: 40px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        border-radius: 5px;
-        border: none;
         background-image: url(../../assets/images/upload.svg);
     }
 }

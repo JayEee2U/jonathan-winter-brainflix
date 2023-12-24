@@ -49,7 +49,7 @@ function Body() {
             <div>
                 <h3 className='nextHeader'>JOIN THE CONVERSATION</h3>
             </div>
-            <div>
+            <div className='input'>
                 <input type='text' placeholder='Add a new comment'></input>
             </div>
             <div className='button'>
