@@ -7,25 +7,33 @@ h3.nextHeader {
 }
 
 .videoSection {
-    position: relative;
     display: flex;
-    flex-wrap: wrap;
     @include partials.padding;
 
     
 
-    .nextVideoDiv {
-        height: 80%;
-    }
+    // .nextVideoDiv {
+    //     height: 40%;
+    //     width: 30%;
+    // }
     
     .nextVideoImage {
-        height: 100%;
-        width: 40%;
+        height: 90px;
+        width: 110px;
         border-radius: 8%;
         float: left;
     }
 
     .nextVideoElement {
-       
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h4 {
+            margin-bottom: 0;
+            margin-top: 0;
+            
+        }
     }
 }

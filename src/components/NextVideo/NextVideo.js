@@ -1,7 +1,7 @@
 import './NextVideo.scss';
 
 
-function NextVideo({videos}) {
+function NextVideo({videos, selectVideo}) {
     return (
         <>
         <div>
@@ -10,15 +10,13 @@ function NextVideo({videos}) {
 
       <div>
         {videos.map((v) => (
-          <div className="videoSection">
+          <div className="videoSection" onClick={() => selectVideo(v.id)}>
             <div className="nextVideoDiv">
               <img className="nextVideoImage" src={v.image} alt="" />
             </div>
-            <div>
-              <h3 className="nextVideoElement">{v.title}</h3>
-            </div>
-            <div>
-              <h3 className="nextVideoElement">{v.channel}</h3>
+            <div className="nextVideoElement">
+              <h4 >{v.title}</h4>
+              <h4 >{v.channel}</h4>
             </div>
           </div>
         ))}
