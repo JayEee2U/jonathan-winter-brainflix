@@ -3,6 +3,8 @@ import './Body.scss';
 import likes from '../../assets/images/likes.svg'
 import upload from '../../assets/images/upload.svg'
 import Comments from '../Comments/Comments';
+import NextVideo from '../NextVideo/NextVideo';
+import videos from '../../data/videos.json'
 
 
 const video = videosDetails[0]
@@ -29,10 +31,10 @@ function Body() {
                 <h3>{date}</h3>
             </div>
             <div>
-                <img src={upload} alt='' />
+                <img src={upload} alt='' /><h4>{video.views}</h4>
             </div>
             <div>
-                <img src={likes} alt='' />
+                <img src={likes} alt=''  /><h4>{video.likes}</h4>
                 
             </div>
             
@@ -43,7 +45,7 @@ function Body() {
             </p>
         </div>
         <Comments video={video} />   
-            
+        <NextVideo videos={videos}/>
         </>
         );
     }

@@ -1,0 +1,31 @@
+@use '../../styles/partials/_partials';
+
+
+
+h3.nextHeader {
+    @include partials.heading
+}
+
+.videoSection {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    @include partials.padding;
+
+    
+
+    .nextVideoDiv {
+        height: 80%;
+    }
+    
+    .nextVideoImage {
+        height: 100%;
+        width: 40%;
+        border-radius: 8%;
+        float: left;
+    }
+
+    .nextVideoElement {
+       
+    }
+}
