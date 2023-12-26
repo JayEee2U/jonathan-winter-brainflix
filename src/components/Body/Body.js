@@ -17,7 +17,8 @@ function Body() {
     return (
         <>
         <div className='container-image'>
-            <img  className='image_Red-Cow' src={video.image} alt=' ' />
+            <video  className='video__Red-Cow' poster={video.image} controls></video>
+            {/* <img  className='image_Red-Cow' src={video.image} alt=' ' /> */}
         </div>
         <div className='comment'>
             <h1>{video.title}</h1>
@@ -25,16 +26,16 @@ function Body() {
         </div>
         <div className='container-commenter'>
             <div className='commentator'>
-                <h3>By {video.channel}</h3>
+                <h4 className='commentator-name'>By {video.channel}</h4>
             </div>
             <div>
-                <h3>{date}</h3>
+                <h4 className='commentator-font' className='commentator-date'>{date}</h4>
             </div>
             <div>
-                <img src={upload} alt='' /><h4>{video.views}</h4>
+                <img className='commentator-views' src={upload} alt='' /><h4>{video.views}</h4>
             </div>
             <div>
-                <img src={likes} alt=''  /><h4>{video.likes}</h4>
+                <img className='commmentator-likes' src={likes} alt=''  /><h4>{video.likes}</h4>
                 
             </div>
             

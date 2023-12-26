@@ -5,16 +5,53 @@
     object-fit: contain;
     width: 100vw;
     height: 20%;
-}
 
-.image_Red-Cow {
-    width: 100%;
-    height: 100%;  
+    .video__Red-Cow {
+        width: 100%;
+        height: 20%;  
+        
+    }
     
 }
 
+
+
 .container-commenter {
     @include partials.padding;
+    display: flex;
+    flex-wrap: wrap;
+    // flex-direction: column;
+
+    h4 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .commentator-font {
+        color: #AFAFAF ;
+    }
+
+    .commentator-name {
+        height: 15px;
+        width: 45vw;
+
+    }
+
+    .commentator-date {
+        height: 15px;
+        width: 45vw;
+    }
+
+    .commentator-views {
+        height: 15px;
+        width: 45vw;
+    }
+
+    .commmentator-likes {
+        height: 15px;
+        width: 45vw;
+    }
+
 }
 
 .video-commentary {
