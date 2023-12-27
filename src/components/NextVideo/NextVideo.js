@@ -16,7 +16,7 @@ function NextVideo({videos, selectVideo}) {
             </div>
             <div className="nextVideoElement">
               <h4 >{v.title}</h4>
-              <h4 >{v.channel}</h4>
+              <h4 className='video-channel'>{v.channel}</h4>
             </div>
           </div>
         ))}

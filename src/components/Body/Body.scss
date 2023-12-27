@@ -57,32 +57,9 @@
 .video-commentary {
     @include partials.padding;
 
-    p {
+    p.video-commentary__paragraph {
+        font-weight: 100;
         margin: 0;
-    }
-}
-
-.newCommentSection {
-    @include partials.padding;
-
-    button {
-        @include partials.button;
-        background-image: url(../../assets/images/add_comment.svg);
-        width: 70vw;
-    }
-
-    .button {
-        margin-left: 60px;
-    }
-
-    input {
-        @include partials.input;
-        width: 65vw;
-        height: 140px;
-    }
-
-    .input {
-        margin-left: 65px;
     }
 }
 

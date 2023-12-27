@@ -1,14 +1,41 @@
+@use  '../../styles/partials/_partials';
 
-
-.newCommentSection {
-
-    .input {
-        // background-origin: content-box;
-        // background-position: left center;
-        text-align: center;
+.new-comment__section {
+    @include partials.padding;
+    
+    button {
+    @include partials.button;
+    background-image: url(../../assets/images/add_comment.svg);
+    width: 70vw;
     }
 
-    p {
-        font-weight: lighter;
+    .button {
+    margin-left: 60px;
+    }
+
+    input {
+    @include partials.input;
+    width: 65vw;
+    height: 140px;
+    }
+    
+    .input {
+    margin-left: 65px;
+    }
+}
+
+.comment-section {
+    margin: 15px;
+
+    .empty-avatar {
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        background-color: #E1E1E1;
+    }
+
+    .comment-timestamp {
+        font-weight: 100;
+        color: #AFAFAF;
     }
 }

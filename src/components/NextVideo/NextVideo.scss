@@ -3,20 +3,15 @@
 
 
 h3.nextHeader {
-    @include partials.heading
+    @include partials.heading;
+    padding-left: 16px;
+    font-weight: 500;
 }
 
 .videoSection {
     display: flex;
     @include partials.padding;
 
-    
-
-    // .nextVideoDiv {
-    //     height: 40%;
-    //     width: 30%;
-    // }
-    
     .nextVideoImage {
         height: 90px;
         width: 110px;
@@ -34,6 +29,10 @@ h3.nextHeader {
             margin-bottom: 0;
             margin-top: 0;
             
+        }
+
+        .video-channel {
+            font-weight: 100;
         }
     }
 }
