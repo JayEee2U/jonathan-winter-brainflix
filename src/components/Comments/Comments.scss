@@ -2,26 +2,53 @@
 
 .new-comment__section {
     @include partials.padding;
-    
-    button {
-    @include partials.button;
-    background-image: url(../../assets/images/add_comment.svg);
-    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90vw;
+    height: 40vw;
+
+    .avatar-div {
+        height: 100%;
+
+        .avatar-mohan {
+            @include partials.avatar;
+            margin-top: 20px;
+        }
     }
 
-    .button {
-    margin-left: 60px;
+    .next-header {
+        @include partials.heading;
+        height: 35px;
+    }
+
+    .next-header__intro {
+        margin-bottom: 2px;
+        font-size: 12px;
+        float: right;
+    }
+
+    .button-comment {
+        margin-left: 60px;
+        
+        button {
+            @include partials.button;
+            background-image: url(../../assets/images/add_comment.svg);
+            width: 70vw;
+        }
+
     }
 
     input {
-    @include partials.input;
-    width: 65vw;
-    height: 140px;
+        @include partials.input;
+        width: 65vw;
+        height: 140px;
     }
     
-    .input {
-    margin-left: 65px;
+    .new-comment__input {
+        margin-left: 65px;
     }
+
 }
 
 .comment-section {

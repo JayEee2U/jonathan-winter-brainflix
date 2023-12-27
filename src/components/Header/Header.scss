@@ -49,13 +49,13 @@ header {
 
 @media screen  and (min-width: 768px) {
     
-//     button {
-//         margin-top: 15px;
-//         max-width: 25%;
-//     }
-    
     .NavBar {
         flex-wrap: nowrap;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-top: 2vw;
+        padding-bottom: 0;
+        width: 95vw;
     }
 
     header {
@@ -75,7 +75,7 @@ header {
 
         .avatar-div {
             order: 4;
-
+            padding-right: 5vw;
         }
 
         .search-bar {

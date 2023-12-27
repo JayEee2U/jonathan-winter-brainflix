@@ -37,17 +37,17 @@ function Body() {
             <div className='divider'>&nbsp;</div>
         </div>
         <div className='container-commenter'>
-            <div className='commentator'>
+            <div className='commentator-div'>
                 <h4 className='commentator-name'>By {videoDetails.channel}</h4>
             </div>
-            <div>
+            <div className='commentator-div'>
                 <h4 className='commentator-font' id='commentator-date'>{date}</h4>
             </div>
-            <div>
+            <div className='commentator-div'>
                 <h4 className='commentator-font'>
                 <img className='commentator-views' src={upload} alt='' />{videoDetails.views}</h4>
             </div>
-            <div>
+            <div className='commentator-div'>
                 <h4 className='commentator-font'>
                 <img className='commmentator-likes' src={likes} alt=''  />{videoDetails.likes}</h4>
                 

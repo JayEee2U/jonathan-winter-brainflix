@@ -79,3 +79,35 @@
     @include partials.padding;
 }
 
+@media screen  and (min-width: 768px) {
+
+    .container-image {
+        background-color: #000000;
+
+        .video__Red-Cow {
+            width: 90vw;
+            height: 100%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    }
+
+    h1 {
+        margin-left: 5vw;
+        
+    }
+
+    .container-commenter {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0;
+        
+        .commentator-div {
+            width: 5vw;
+            height: 5vw;
+        }
+    }
+}
+
+
+

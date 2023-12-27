@@ -12,15 +12,15 @@ function Comments({video}) {
     <>
       <div className="new-comment__section">
           <div className="avatar-div">
-            <img className="avatar" src={MohanM} alt="Mohan Muruge" />
+            <img className="avatar-mohan" src={MohanM} alt="Mohan Muruge" />
           </div>
         <div className='next-header'>
           <h3 className="next-header__intro">JOIN THE CONVERSATION</h3>
         </div>
         <div className="input">
-          <input type="text" placeholder="Add a new comment"></input>
+          <input className='new-comment__input' type="text" placeholder="Add a new comment"></input>
         </div>
-        <div className="button">
+        <div className="button-comment">
           <button type="button">COMMENT</button>
         </div>
       </div>
