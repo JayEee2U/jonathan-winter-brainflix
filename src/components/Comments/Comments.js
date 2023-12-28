@@ -11,18 +11,11 @@ function Comments({video}) {
   return (
     <>
       <div className="new-comment__section">
-        <div className='next-header'>
-          <h3 className="next-header__intro">JOIN THE CONVERSATION</h3>
-        </div>
-        <div className='commentor-box'>
           <div className="avatar-div">
+            <h3 className="next-header__intro">JOIN THE CONVERSATION</h3>
             <img className="avatar-mohan" src={MohanM} alt="Mohan Muruge" />
-          </div>
-          <div className="input">
             <input className='new-comment__input' type="text" placeholder="Add a new comment"></input>
           </div>
-        </div>
-        
         <div className="button-comment">
           <button type="button">COMMENT</button>
         </div>

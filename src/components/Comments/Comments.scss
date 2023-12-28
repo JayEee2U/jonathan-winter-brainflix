@@ -7,26 +7,18 @@
     flex-wrap: nowrap;
     width: 90vw;
     
-
-    .avatar-div {
-        height: 100%;
-
-        .avatar-mohan {
-            @include partials.avatar;
-            margin-top: 20px;
-        }
-    }
-
-    .commentor-box {
-        display: flex;
+    .avatar-mohan {
+        @include partials.avatar;
+        margin-bottom: 40px;
     }
 
     .next-header {
-        @include partials.heading;
+        // @include partials.heading;
         height: 35px;
     }
 
     .next-header__intro {
+        @include partials.heading;
         margin-bottom: 2px;
         font-size: 12px;
         padding-left: 65px;
@@ -80,5 +72,51 @@
     .comment-timestamp {
         font-weight: 100;
         color: #AFAFAF;
+    }
+}
+
+@media screen  and (min-width: 768px) {
+
+    h1 {
+        padding-left: 4vw;
+    }
+
+    .new-comment__section {
+        width: 93vw;
+        display:flex;
+        flex-flow: row;
+        padding-top: 0;
+        padding-bottom: 2vw;
+
+        .next-header__intro {
+            padding-left: 7vw;
+        }
+
+        .avatar-mohan {
+            margin-bottom: 0;
+        }
+
+        input {
+            @include partials.input;
+            width: 56vw;
+            height: 35px;
+        }
+        
+
+        .button-comment {
+            padding-top: 18px;
+            margin-left: 5vw;
+            
+
+            
+            button {
+                width: 22vw;
+            }
+        }
+    }
+
+    .comment-section {
+        margin-left: 5vw;
+        margin-right: 5vw;
     }
 }
