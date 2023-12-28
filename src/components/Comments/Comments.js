@@ -32,7 +32,7 @@ function Comments({video}) {
         <>
         <div className="comment-section">
           <div >
-            <img className="empty-avatar" placeholder="" alt="" />
+            <div className="empty-avatar"></div>
           </div>
           <div>
             <div className='comment-name__date'>

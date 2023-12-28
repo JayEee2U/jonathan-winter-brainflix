@@ -40,19 +40,17 @@ function Body() {
             <div className='commentator-div'>
                 <h4 className='commentator-name'>By {videoDetails.channel}</h4>
             </div>
-            <div className='commentator-div'>
+            <div className='commentator-div commentator-img'>
                 <img className='commentator-views' src={views} alt='views' />
                 <h4 className='commentator-font'>{videoDetails.views}</h4>
             </div>
             <div className='commentator-div'>
-                <h4 className='commentator-font' id='commentator-date'>{date}</h4>
+                <h4 className='commentator-font '>{date}</h4>
             </div>
             
-            <div className='commentator-div'>
+            <div className='commentator-div commentator-img'>
                 <img className='commmentator-likes' src={likes} alt='likes'  />
-                <h4 className='commentator-font'>{videoDetails.likes}</h4>
-                
-                
+                <h4 className='commentator-font'>{videoDetails.likes}</h4>    
             </div>
             
          </div>

@@ -7,9 +7,15 @@
   src: 
     local('Avenir'), 
     url(./assets/fonts/AvenirNextLTPro-Regular.otf) format('opentype'),
-    url(./assets/fonts/AvenirNextLTPro-Bold.otf) format('opentype'),
-    url(./assets/fonts/AvenirNextLTPro.ttf) format('truetype'),
-    url(./assets/fonts/AvenirNextLTProBold.ttf) format('truetype');
+    url(./assets/fonts/AvenirNextLTPro.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src:
+  url(./assets/fonts/AvenirNextLTPro-Bold.otf) format('opentype'),
+  url(./assets/fonts/AvenirNextLTProBold.ttf) format('truetype');
+  font-weight: bold;
 }
 
 

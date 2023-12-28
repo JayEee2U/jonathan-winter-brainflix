@@ -95,14 +95,28 @@ h1 {
         
     }
 
+    .comment {
+
+        .divider {
+            display: none;
+        }
+    }
+
     .container-commenter {
         flex-direction: row;
         justify-content: space-around;
         padding: 0;
         
+
+    
+        
         .commentator-div {
-            width: 5vw;
+            width: 17vw;
             height: 5vw;
+        }
+
+        .commentator-img {
+            order: 4;
         }
     }
 }
