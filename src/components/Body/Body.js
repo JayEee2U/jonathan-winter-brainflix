@@ -1,7 +1,7 @@
 import videoDetailsData from '../../data/video-details.json';
 import './Body.scss';
 import likes from '../../assets/images/likes.svg'
-import upload from '../../assets/images/upload.svg'
+import views from '../../assets/images/views.svg'
 import Comments from '../Comments/Comments';
 import NextVideo from '../NextVideo/NextVideo';
 import videosData from '../../data/videos.json'
@@ -41,15 +41,17 @@ function Body() {
                 <h4 className='commentator-name'>By {videoDetails.channel}</h4>
             </div>
             <div className='commentator-div'>
+                <img className='commentator-views' src={views} alt='views' />
+                <h4 className='commentator-font'>{videoDetails.views}</h4>
+            </div>
+            <div className='commentator-div'>
                 <h4 className='commentator-font' id='commentator-date'>{date}</h4>
             </div>
+            
             <div className='commentator-div'>
-                <h4 className='commentator-font'>
-                <img className='commentator-views' src={upload} alt='' />{videoDetails.views}</h4>
-            </div>
-            <div className='commentator-div'>
-                <h4 className='commentator-font'>
-                <img className='commmentator-likes' src={likes} alt=''  />{videoDetails.likes}</h4>
+                <img className='commmentator-likes' src={likes} alt='likes'  />
+                <h4 className='commentator-font'>{videoDetails.likes}</h4>
+                
                 
             </div>
             

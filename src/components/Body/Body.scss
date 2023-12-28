@@ -1,6 +1,10 @@
 @use '../../styles/partials/_partials';
 
 
+h1 {
+    font-weight: bolder;
+}
+
 .container-image {
     object-fit: contain;
     width: 100vw;
@@ -20,37 +24,31 @@
     @include partials.padding;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    order: 2;
 
     h4 {
-        margin-top: .5rem;
-        margin-bottom: .5;
+        display: inline;
+        margin: auto 0;
     }
 
     h4.commentator-font {
-        color: #AFAFAF ;
+        color: #AFAFAF;
+        font-weight: 400;
     }
 
-    .commentator-name {
-        height: 15px;
+    img {
+        width: 19px;
+        height: 19px;
+       margin: auto .6rem;
+
+    }
+
+    .commentator-div {
+        display: flex;
+        height: 35px;
         width: 45vw;
-
     }
 
-    #commentator-date {
-        height: 15px;
-        width: 45vw;
-    }
-
-    .commentator-views {
-        height: 15px;
-        width: 5vw;
-    }
-
-    .commmentator-likes {
-        height: 15px;
-        width: 5vw;
-    }
 
 }
 

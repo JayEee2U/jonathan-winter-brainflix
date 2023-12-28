@@ -3,10 +3,10 @@
 .new-comment__section {
     @include partials.padding;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
     width: 90vw;
-    height: 40vw;
+    
 
     .avatar-div {
         height: 100%;
@@ -17,6 +17,10 @@
         }
     }
 
+    .commentor-box {
+        display: flex;
+    }
+
     .next-header {
         @include partials.heading;
         height: 35px;
@@ -25,7 +29,7 @@
     .next-header__intro {
         margin-bottom: 2px;
         font-size: 12px;
-        float: right;
+        padding-left: 65px;
     }
 
     .button-comment {
@@ -41,24 +45,36 @@
 
     input {
         @include partials.input;
-        width: 65vw;
+        width: 70vw;
         height: 140px;
     }
     
     .new-comment__input {
-        margin-left: 65px;
+        margin-left: 22px;
     }
 
 }
 
 .comment-section {
+    display: flex;
     margin: 15px;
 
+    h4 {
+        margin: 0;
+    }
+
     .empty-avatar {
+        margin-top: 25px;
+        margin-right: 10px;
         height: 36px;
         width: 36px;
         border-radius: 50%;
         background-color: #E1E1E1;
+    }
+
+    .comment-name__date {
+        display: flex;
+        justify-content: space-between;
     }
 
     .comment-timestamp {
