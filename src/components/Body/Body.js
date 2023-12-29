@@ -30,7 +30,7 @@ function Body() {
     return (
         <>
         <div className='container-image'>
-            <video  className='video__Red-Cow' poster={videoDetails.image}>Your browwser does not support the video tag</video>
+            <video  className='video__Red-Cow' controls poster={videoDetails.image}>Your browwser does not support the video tag</video>
         </div>
         <div className='comment'>
             <h1>{videoDetails.title}</h1>

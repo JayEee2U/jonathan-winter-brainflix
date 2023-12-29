@@ -8,7 +8,13 @@
 }
 
 h1 {
-   padding: 0 5vw
+    padding: 0 5vw;
+}
+
+
+input::placeholder {
+    color: #323232;
+    padding-left: 3vw;
 }
 
 header {
@@ -19,10 +25,12 @@ header {
         height: 35px;
         background-image: url(../../assets/images/search.svg);
         background-repeat: no-repeat;
-        background-position: left center;
         padding-left: 10px;
         background-origin: content-box;
+    
     }
+
+    
 
     .logo-header {
         height: 25px;
@@ -46,6 +54,10 @@ header {
         @include partials.button;
         width: 90vw;
         background-image: url(../../assets/images/upload.svg);
+    }
+
+    button:hover {
+        background-color: #0065AD;
     }
 }
 
@@ -91,8 +103,39 @@ header {
                 margin-top: 0;
             }
         }
-    }
- 
-    
+    }  
 }
 
+@media screen  and (min-width: 1280px) {
+
+    .NavBar {
+        display: flex;
+        justify-content: flex-end;
+
+        input {
+            width: 17vw;
+        }
+
+        button {
+            width: 10vw;
+        }
+
+        .logo-div {
+            width: 40vw;
+        }
+
+        .search-bar {
+            width: 17vw;
+        }
+
+        .upload-bar {
+            width: 13vw;
+        }
+        .avatar-div {
+            width: 8vw;
+        }
+
+    }
+
+    
+}

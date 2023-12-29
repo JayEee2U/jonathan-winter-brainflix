@@ -6,11 +6,11 @@ function Header() {
     return (
         <header>
             <div className='NavBar'>
-                <div>
+                <div className='logo-div'>
                     <img className='logo-header' src={Brainflix} alt="Brainflix logo" />
                 </div>
                 <div  className='search-bar'>
-                    <input type="text"  name="name" placeholder='     Search'></input>    
+                    <input type="text"  name="name" placeholder='Search'></input>    
                 </div>
                 <div className='avatar-div'>
                     <img  className="avatar" src={MohanM} alt="Mohan Muruge" />

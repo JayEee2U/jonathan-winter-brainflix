@@ -5,6 +5,7 @@ h1 {
     font-weight: bolder;
 }
 
+
 .container-image {
     object-fit: contain;
     width: 100vw;
@@ -13,7 +14,6 @@ h1 {
     .video__Red-Cow {
         width: 100%;
         height: 20%;  
-        
     }
     
 }
@@ -39,7 +39,7 @@ h1 {
     img {
         width: 19px;
         height: 19px;
-       margin: auto .6rem;
+        margin: auto .6rem;
 
     }
 
@@ -113,6 +113,18 @@ h1 {
 
         .commentator-img {
             order: 4;
+        }
+    }
+}
+
+@media screen  and (min-width: 1280px) {
+
+    .container-image {
+
+        .video__Red-Cow {
+            width: 70vw;
+            margin-left: 14%;
+            margin-right: 5%;
         }
     }
 }

@@ -13,7 +13,6 @@
     }
 
     .next-header {
-        // @include partials.heading;
         height: 35px;
     }
 
@@ -33,12 +32,22 @@
             width: 70vw;
         }
 
+        button:hover {
+            background-color: #0065AD;
+        }
+
     }
 
     input {
         @include partials.input;
         width: 70vw;
         height: 140px;
+    }
+
+    input::placeholder {
+        color: #323232;
+        background-origin: border-box;
+        background-position: center top;
     }
     
     .new-comment__input {
