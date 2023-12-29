@@ -4,7 +4,7 @@
 
 h3.nextHeader {
     @include partials.heading;
-    padding-left: 16px;
+    padding-left: 1rem;
     font-weight: 500;
 }
 
@@ -13,14 +13,14 @@ h3.nextHeader {
     @include partials.padding;
 
     .nextVideoImage {
-        height: 90px;
-        width: 110px;
+        height: 5.625rem;
+        width: 6.875rem;
         border-radius: 8%;
         float: left;
     }
 
     .nextVideoElement {
-        margin-left: 10px;
+        margin-left: .625rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

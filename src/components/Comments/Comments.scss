@@ -9,22 +9,22 @@
     
     .avatar-mohan {
         @include partials.avatar;
-        margin-bottom: 40px;
+        margin-bottom: 2.5rem;
     }
 
     .next-header {
-        height: 35px;
+        height: 2.188rem;
     }
 
     .next-header__intro {
         @include partials.heading;
-        margin-bottom: 2px;
-        font-size: 12px;
-        padding-left: 65px;
+        margin-bottom: .125rem;
+        font-size: .75rem;
+        padding-left: 4.063rem;
     }
 
     .button-comment {
-        margin-left: 60px;
+        margin-left: 3.75rem;
         
         button {
             @include partials.button;
@@ -41,7 +41,7 @@
     input {
         @include partials.input;
         width: 70vw;
-        height: 140px;
+        height: 8.75rem;
     }
 
     input::placeholder {
@@ -51,24 +51,24 @@
     }
     
     .new-comment__input {
-        margin-left: 22px;
+        margin-left: 1.375rem;
     }
 
 }
 
 .comment-section {
     display: flex;
-    margin: 15px;
+    margin: .938rem;
 
     h4 {
         margin: 0;
     }
 
     .empty-avatar {
-        margin-top: 25px;
-        margin-right: 10px;
-        height: 36px;
-        width: 36px;
+        margin-top: 1.563rem;
+        margin-right: .625rem;
+        height: 2.25rem;
+        width: 2.25rem;
         border-radius: 50%;
         background-color: #E1E1E1;
     }
@@ -108,12 +108,12 @@
         input {
             @include partials.input;
             width: 56vw;
-            height: 35px;
+            height: 2.188rem;
         }
         
 
         .button-comment {
-            padding-top: 18px;
+            padding-top: 1.125rem;
             margin-left: 5vw;
             
 
