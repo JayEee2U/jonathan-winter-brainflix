@@ -3,7 +3,7 @@ import './NextVideo.scss';
 
 function NextVideo({videos, selectVideo}) {
     return (
-        <>
+        <div className='breakpoint-Next__Videos'>
         <div>
         <h3 className="nextHeader">NEXT VIDEOS</h3>
       </div>
@@ -21,7 +21,7 @@ function NextVideo({videos, selectVideo}) {
           </div>
         ))}
       </div>
-        </>
+        </div>
 
 
     )

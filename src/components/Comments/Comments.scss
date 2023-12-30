@@ -46,8 +46,9 @@
 
     input::placeholder {
         color: #323232;
-        background-origin: border-box;
-        background-position: center top;
+        padding-left: 40px;
+        
+
     }
     
     .new-comment__input {
@@ -127,5 +128,24 @@
     .comment-section {
         margin-left: 5vw;
         margin-right: 5vw;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    
+    .new-comment__section {
+        width: 50vw;
+        .new-comment__input {
+            width: 30vw;
+        }
+
+        .button-comment {
+
+            button {
+                width: 10vw;
+            }
+        }
+
+        
     }
 }

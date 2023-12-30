@@ -32,6 +32,8 @@ function Body() {
         <div className='container-image'>
             <video  className='video__Red-Cow' controls poster={videoDetails.image}>Your browwser does not support the video tag</video>
         </div>
+        <div className='breakpoint-desktop'>
+            <div className='comments-breakpoint'>
         <div className='comment'>
             <h1>{videoDetails.title}</h1>
             <div className='divider'>&nbsp;</div>
@@ -53,19 +55,22 @@ function Body() {
                 <h4 className='commentator-font'>{videoDetails.likes}</h4>    
             </div>
             
-         </div>
-         <div className='divider'>&nbsp;</div>
+        </div>
+        <div className='divider'>&nbsp;</div>
         <div className='video-commentary'>
             <p className='video-commentary__paragraph'>{videoDetails.description}
             </p>
         </div>
+        <div>
+        <h4 className='comments-number'>{videoDetails.comments.length} comments</h4> 
+        </div>
         <Comments
-         video={videoDetails}
-         />   
+        video={videoDetails}
+        /></div>
         <NextVideo 
         videos={filteredVideos}
         selectVideo={handleSelectVideo}
-        />
+        /></div>
         </>
         );
     }

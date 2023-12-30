@@ -40,10 +40,33 @@ h3.nextHeader {
 @media screen  and (min-width: 768px) {
 
     .videoSection {
-        padding: 2vw;
+        
+        padding: 1.5vw;
+
+        .nextVideoImage {
+            height: 6vw;
+        }
+        
+        .nextVideoElement {
+            height: 6vw;
+        }
 
         h4 {
             width: 25vw;
         }
+    }
+}
+
+@media  screen and (min-width: 1280px) {
+
+    .videoSection {
+        h4 {
+            width: 15vw;
+        }
+        
+    }
+
+    .breakpoint-Next__Videos {
+        border-left: 1px solid  #E1E1E1;
     }
 }
