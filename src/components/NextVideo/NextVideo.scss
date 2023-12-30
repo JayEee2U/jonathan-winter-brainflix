@@ -39,17 +39,15 @@ h3.nextHeader {
 
 @media screen  and (min-width: 768px) {
 
+    h3.nextHeader {
+        padding-left: 5vw;
+    }
+
     .videoSection {
         
-        padding: 1.5vw;
-
-        .nextVideoImage {
-            height: 6vw;
-        }
-        
-        .nextVideoElement {
-            height: 6vw;
-        }
+        padding-left: 5vw;
+        padding-top: 2.5vh;
+        padding-bottom: 2.5vh;
 
         h4 {
             width: 25vw;
