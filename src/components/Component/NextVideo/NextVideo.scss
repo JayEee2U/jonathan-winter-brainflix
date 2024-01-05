@@ -2,24 +2,24 @@
 
 
 
-h3.nextHeader {
+h3.next-header {
     @include partials.heading;
     padding-left: 1rem;
     font-weight: 500;
 }
 
-.videoSection {
+.video-section {
     display: flex;
     @include partials.padding;
 
-    .nextVideoImage {
+    .next-video__image {
         height: 5.625rem;
         width: 6.875rem;
         border-radius: 8%;
         float: left;
     }
 
-    .nextVideoElement {
+    .next-video__element {
         margin-left: .625rem;
         display: flex;
         flex-direction: column;
@@ -39,11 +39,11 @@ h3.nextHeader {
 
 @media screen  and (min-width: 768px) {
 
-    h3.nextHeader {
+    h3.next-header {
         padding-left: 5vw;
     }
 
-    .videoSection {
+    .video-section {
         
         padding-left: 5vw;
         padding-top: 2.5vh;
@@ -57,14 +57,14 @@ h3.nextHeader {
 
 @media  screen and (min-width: 1280px) {
 
-    .videoSection {
+    .video-section {
         h4 {
             width: 15vw;
         }
         
     }
 
-    .breakpoint-Next__Videos {
+    .breakpoint-next__videos {
         border-left: 1px solid  #E1E1E1;
     }
 }

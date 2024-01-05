@@ -7,25 +7,25 @@ function Upload() {
         <>
         <Header />
         <div className='divider'>&nbsp;</div>
-        <main>
+        <main className="upload-section">
             <section className="video-upload__1">
                 <h1>Upload Video</h1> 
-                <div>
-                    <h4>VIDEO THUMBNAIL</h4>
+                <div className="video-image__div">
+                    <h5>VIDEO THUMBNAIL</h5>
                     <img className="video-thumbnail" 
                     src={VideoPreview} 
                     alt="Upload Video Preview" />
                 </div>
                 <div  className='video-title'>
-                    <h4>TITLE YOUR VIDEO</h4>
-                    <input type="text"  
+                    <h5>TITLE YOUR VIDEO</h5>
+                    <input className="video-title__input" type="text"  
                     name="name" 
                     placeholder='Add a title to your video'>
                     </input>    
                 </div>
                 <div  className='video-description'>
-                    <h4>ADD A VIDEO DESCRIPTION</h4>
-                    <textarea type="text"  
+                    <h5>ADD A VIDEO DESCRIPTION</h5>
+                    <textarea className="text-description" type="text"  
                     name="name" 
                     placeholder='Add a description to your video'>
                     </textarea>    
