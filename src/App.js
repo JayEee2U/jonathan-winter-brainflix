@@ -1,19 +1,18 @@
 import './App.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './components/Header/Header';
-import Body from './components/Body/Body';
+import Body from './components/Component/Body/Body';
 import Page from './pages/Page/Page';
-
+import Upload from './pages/Upload/Upload';
 
 
 function App() {
   return (
   <>
-    <Header />
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Body />}/>
-        <Route path='/pages' element={<Pages />}/>
+        <Route path='/pages' element={<Page/>}/>
+        <Route path='/Upload' element={<Upload/>}/>
       </Routes>
     </BrowserRouter>
   </>

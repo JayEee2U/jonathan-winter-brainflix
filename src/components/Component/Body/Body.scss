@@ -1,0 +1,173 @@
+@use '../../styles/partials/_partials';
+
+
+h1 {
+    font-weight: bolder;
+}
+
+
+.container-image {
+    object-fit: contain;
+    width: 100vw;
+    height: 20%;
+
+    .video__Red-Cow {
+        width: 100%;
+        height: 20%;  
+    }
+    
+}
+
+
+
+.container-commenter {
+    @include partials.padding;
+    display: flex;
+    flex-wrap: wrap;
+    order: 2;
+
+    h4 {
+        display: inline;
+        margin: auto 0;
+    }
+
+    h4.commentator-font {
+        color: #AFAFAF;
+        font-weight: 400;
+    }
+
+    img {
+        width: 1.188rem;
+        height: 1.188rem;
+        margin: auto .6rem;
+
+    }
+
+    .commentator-div {
+        display: flex;
+        height: 2.188rem;
+        width: 45vw;
+    }
+
+
+}
+
+.video-commentary {
+    @include partials.padding;
+
+    p.video-commentary__paragraph {
+        font-weight: 100;
+        margin: 0;
+    }
+}
+
+.comments-number {
+    padding-left: 5vw;
+}
+
+.divider {
+    border-bottom:  1px solid #E1E1E1;
+    width:  90vw;
+    height: .063rem;
+    margin: 0px auto;
+}
+    
+.avatar {
+    @include partials.avatar;
+
+}
+
+.commentSection {
+    @include partials.padding;
+}
+
+@media screen  and (min-width: 768px) {
+
+    .container-image {
+        background-color: #000000;
+
+        .video__Red-Cow {
+            width: 90vw;
+            height: 100%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    }
+
+
+    .comment {
+
+        .divider {
+            display: none;
+        }
+    }
+
+    .container-commenter {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0;
+        padding-left: 0;
+        padding-right: 4vw;
+        
+        .commentator-div {
+            width: 15vw;
+            height: 5vw;
+        }
+
+        .commentator-img {
+            order: 4;
+            width: 8vw;
+        }
+    }
+}
+
+@media screen  and (min-width: 1280px) {
+
+    .video-commentary {
+        padding-top: 2rem;
+        padding-right: 1rem;
+        padding-bottom: 2rem;
+        padding-left: 3rem;
+    }
+
+
+    h4 {
+        padding-left: 3vw;
+    }
+
+    .container-commenter {
+
+        h4.commentator-font{
+            
+            padding-left: 0;
+        }
+    }
+
+    .comments-number {
+        padding-left: 5vw;
+    }
+
+    .container-image {
+
+        .video__Red-Cow {
+            width: 70vw;
+            margin-left: 14%;
+            margin-right: 5%;
+        }
+    }
+
+    .divider {
+        width: 60vw;
+    }
+
+    .breakpoint-desktop {
+        display: flex;
+
+        .comments-breakpoint {
+            width: 60vw;
+        }
+    }
+}
+
+
+
