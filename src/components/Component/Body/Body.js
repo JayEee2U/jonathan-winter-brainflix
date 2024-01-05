@@ -1,7 +1,7 @@
 import videoDetailsData from '../../../data/video-details.json';
 import './Body.scss';
-import likes from '../../assets/images/likes.svg'
-import views from '../../assets/images/views.svg'
+import likes from '../../../assets/images/likes.svg'
+import views from '../../../assets/images/views.svg'
 import Comments from '../Comments/Comments';
 import NextVideo from '../NextVideo/NextVideo';
 import videosData from '../../../data/videos.json'

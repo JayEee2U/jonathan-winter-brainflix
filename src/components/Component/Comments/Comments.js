@@ -1,5 +1,5 @@
-import MohanM from '../../assets/images/Mohan-muruge.jpg'
-import './Comments.scss'
+import MohanM from '../../../assets/images/Mohan-muruge.jpg'
+import '../Comments/Comments.scss'
 
 
 

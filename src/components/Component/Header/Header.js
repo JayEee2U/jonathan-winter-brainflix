@@ -1,5 +1,5 @@
-import Brainflix from '../../assets/images/BrainFlix-logo.svg'
-import MohanM from '../../assets/images/Mohan-muruge.jpg'
+import Brainflix from '../../../assets/images/BrainFlix-logo.svg'
+import MohanM from '../../../assets/images/Mohan-muruge.jpg'
 import Upload from '../../../pages/Upload/Upload';
 import './Header.scss'
 import { Link } from 'react-router-dom'

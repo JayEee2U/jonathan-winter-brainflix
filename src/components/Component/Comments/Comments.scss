@@ -1,4 +1,4 @@
-@use  '../../styles/partials/_partials';
+@use  '../../../styles/partials/_partials';
 
 .new-comment__section {
     @include partials.padding;
@@ -28,7 +28,7 @@
         
         button {
             @include partials.button;
-            background-image: url(../../assets/images/add_comment.svg);
+            background-image: url(../../../assets/images/add_comment.svg);
             width: 70vw;
         }
 

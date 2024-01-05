@@ -1,4 +1,4 @@
-@use '../../styles/partials/_partials.scss';
+@use '../../../styles/partials/_partials';
 
 .NavBar {
     display: flex;
@@ -10,7 +10,7 @@
         @include partials.input;
         width: 68vw;
         height: 2.188rem;
-        background-image: url(../../assets/images/search.svg);
+        background-image: url(../../../assets/images/search.svg);
         background-repeat: no-repeat;
         padding-left: .625rem;
         background-origin: content-box;
@@ -42,7 +42,7 @@
     button {
         @include partials.button;
         width: 90vw;
-        background-image: url(../../assets/images/upload.svg);
+        background-image: url(../../../assets/images/upload.svg);
     }
 
     button:hover {
