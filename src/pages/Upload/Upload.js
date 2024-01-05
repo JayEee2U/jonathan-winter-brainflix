@@ -8,7 +8,7 @@ function Upload() {
         <Header />
         <div className='divider'>&nbsp;</div>
         <main>
-            <section>
+            <section className="video-upload__1">
                 <h1>Upload Video</h1> 
                 <div>
                     <h4>VIDEO THUMBNAIL</h4>
