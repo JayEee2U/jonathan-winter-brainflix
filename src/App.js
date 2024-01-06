@@ -1,7 +1,6 @@
 import './App.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Body from './components/Component/Body/Body';
-import Page from './pages/Page/Page';
 import Upload from './pages/Upload/Upload';
 
 

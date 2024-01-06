@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import videoDetailsData from "../../../data/video-details.json";
 import DisplayComments from '../DisplayComments/DisplayComments';
 import CommentDetails from '../CommentDetails/CommentDetails';
 import Comments from '../Comments/Comments';

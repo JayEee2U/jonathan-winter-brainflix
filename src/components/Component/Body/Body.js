@@ -1,8 +1,6 @@
-import videoDetailsData from "../../../data/video-details.json";
 import "./Body.scss";
 import Comments from "../Comments/Comments";
 import NextVideo from "../NextVideo/NextVideo";
-import videosData from "../../../data/videos.json";
 import { useState } from "react";
 import Header from "../Header/Header";
 import DisplayComments from "../DisplayComments/DisplayComments";
@@ -13,7 +11,7 @@ import VideoDetails from "../VideoDetails/VideoDetails";
 // "api_key": "da04b08a-6430-435f-8c66-a8d95bdeaaa2"
 
 function Body() {
-  const [videos, setVideos] = useState(videosData);
+  const [videos, setVideos] = useState([]);
   
   const { videoId } = useParams();
 
@@ -23,6 +21,10 @@ function Body() {
 
   const filteredVideos = videos.filter((video) => video.id !== videoIdToDisplay);
 
+
+  if(videos === null){
+    return <div>Loading...</div>
+}
 //   function handleSelectVideo(videoId) {
 //     console.log("handleSelectVideo", videoId);
 //     const foundVideo = videoDetailsData.find((video) => video.id === videoId);
