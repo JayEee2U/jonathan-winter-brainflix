@@ -1,4 +1,6 @@
 import MohanM from '../../../assets/images/Mohan-muruge.jpg'
+import CommentSection from '../../CommentSection/CommentSection';
+import CommentDetails from '../CommentDetails/CommentDetails';
 import '../Comments/Comments.scss'
 
 
@@ -21,23 +23,11 @@ function Comments({video}) {
         </div>
       </div>
       <div className="divider">&nbsp;</div>
-      {video.comments.map((c) => (
-        <>
-        <div className="comment-section">
-          <div >
-            <div className="empty-avatar"></div>
-          </div>
-          <div>
-            <div className='comment-name__date'>
-              <h4>{c.name}</h4>
-              <h4 className='comment-timestamp'>{new Date(c.timestamp).toLocaleDateString()}</h4>
-            </div>
-            <p>{c.comment}</p>
-          </div>
-        </div>
-        <div className="divider">&nbsp;</div>
-        </>
-      ))}
+      {video.comments.map((comment) => (<CommentSection 
+        key={comment.id}
+        comment={comment}
+      />))}
+      
     </>
   );
 }

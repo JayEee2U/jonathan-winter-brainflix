@@ -1,5 +1,5 @@
-import '/CommentDetails.scss'
-import videoDetails from '../../../data/video-details.json'
+import './CommentDetails.scss'
+
 
 function CommentDetails ({videoDetails}) {
     return (
@@ -13,6 +13,7 @@ function CommentDetails ({videoDetails}) {
                     <h4 className='comments-number'>{videoDetails.comments.length} comments</h4> 
                 </div>
             </main>
+            
         </>
     )
 }

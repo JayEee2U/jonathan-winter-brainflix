@@ -1,8 +1,8 @@
 import './DisplayComments'
 import likes from '../../../assets/images/likes.svg'
 import views from '../../../assets/images/views.svg'
-import videoDetails from '../../../data/video-details.json';
-import videosData from '../../../data/videos.json'
+// import videoDetails from '../../../data/video-details.json';
+// import videosData from '../../../data/videos.json'
 
 function DisplayComments ({videoDetails}) {
     return (
@@ -16,7 +16,7 @@ function DisplayComments ({videoDetails}) {
                     <h4 className='commentator-font'>{videoDetails.views}</h4>
                 </div>
                 <div className='commentator-div'>
-                    <h4 className='commentator-font '>{videoDetails.date}</h4>
+                    <h4 className='commentator-font '>{new Date(videoDetails.timestamp).toLocaleDateString()}</h4>
                 </div>
                 
                 <div className='commentator-div commentator-img'>
