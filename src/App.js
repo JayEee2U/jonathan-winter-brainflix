@@ -11,8 +11,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Body />}/>
-        <Route path='/pages' element={<Page/>}/>
-        <Route path='/Upload' element={<Upload/>}/>
+        <Route path='/video/:videoId' element={<Body />}/>
+        <Route path='/upload' element={<Upload />}/>
       </Routes>
     </BrowserRouter>
   </>

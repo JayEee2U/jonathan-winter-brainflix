@@ -1,0 +1,58 @@
+import { useState, useEffect } from 'react'
+import videoDetailsData from "../../../data/video-details.json";
+import DisplayComments from '../DisplayComments/DisplayComments';
+import CommentDetails from '../CommentDetails/CommentDetails';
+import Comments from '../Comments/Comments';
+import axios from 'axios'
+
+// "api_key": "da04b08a-6430-435f-8c66-a8d95bdeaaa2"
+
+function VideoDetails({videoId}) {
+
+    const [videoDetails, setVideoDetails] = useState(null);
+
+    useEffect(() =>{
+        const getVideo = async () => {
+            const response = await axios.get(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=da04b08a-6430-435f-8c66-a8d95bdeaaa2`)
+            setVideoDetails(response.data);
+        }
+        getVideo();
+    },[videoId]);
+
+    if(videoDetails === null){
+        return <div>Loading...</div>
+    }
+
+  return (
+    <>
+      <main>
+        <div className="container-image">
+          <video
+            className="video__Red-Cow"
+            controls
+            poster={videoDetails.image}
+          >
+            Your browwser does not support the video tag
+          </video>
+        </div>
+        <hr className="breakpoint-desktop" />
+        {/* <div className='comments-breakpoint'> */}
+        <div className="comment">
+          <h1>{videoDetails.title}</h1>
+          <div className="divider">&nbsp;</div>
+        </div>
+      </main>
+      <div>
+        <DisplayComments videoDetails={videoDetails} />
+      </div>
+      <div>
+        <CommentDetails videoDetails={videoDetails} />
+      </div>
+      <div>
+        <Comments video={videoDetails} />
+      </div>
+    </>
+  );
+}
+
+export default VideoDetails;

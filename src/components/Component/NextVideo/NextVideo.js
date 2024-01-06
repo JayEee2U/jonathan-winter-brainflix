@@ -1,7 +1,7 @@
 import ThumbnailVideos from "../../ThumbnailVideos/ThumbnailVideos";
 import "./NextVideo.scss";
 
-function NextVideo({ videos, selectVideo }) {
+function NextVideo({ videos }) {
   return (
     <main className="breakpoint-next__videos">
       <div>
@@ -12,7 +12,6 @@ function NextVideo({ videos, selectVideo }) {
         {videos.map((video) => (<ThumbnailVideos
           key={video.id}
           v={video}
-          selectVideo={selectVideo}
         />
           
         ))}

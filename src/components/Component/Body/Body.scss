@@ -13,7 +13,8 @@ h1 {
 
     .video__Red-Cow {
         width: 100%;
-        height: 20%;  
+        height: auto;
+        max-height: 100%;
     }
     
 }
