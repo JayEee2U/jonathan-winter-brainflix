@@ -1,12 +1,11 @@
 import videoDetailsData from '../../../data/video-details.json';
 import './Body.scss';
-import likes from '../../../assets/images/likes.svg'
-import views from '../../../assets/images/views.svg'
 import Comments from '../Comments/Comments';
 import NextVideo from '../NextVideo/NextVideo';
 import videosData from '../../../data/videos.json'
 import { useState } from 'react';
 import Header from '../Header/Header';
+import DisplayComments from '../DisplayComments/DisplayComments';
 
 
 
@@ -27,56 +26,36 @@ function Body() {
 
     }
 
-
     return (
         <>
-        <div>
-        <Header />
-        </div>
-        <div className='container-image'>
-            <video  className='video__Red-Cow' controls poster={videoDetails.image}>Your browwser does not support the video tag</video>
-        </div>
-        <div className='breakpoint-desktop'>
-            <div className='comments-breakpoint'>
-        <div className='comment'>
-            <h1>{videoDetails.title}</h1>
-            <div className='divider'>&nbsp;</div>
-        </div>
-        <div className='container-commenter'>
-            <div className='commentator-div'>
-                <h4 className='commentator-name'>By {videoDetails.channel}</h4>
+            <div>
+            <Header />
             </div>
-            <div className='commentator-div commentator-img'>
-                <img className='commentator-views' src={views} alt='views' />
-                <h4 className='commentator-font'>{videoDetails.views}</h4>
+                <main>
+                    <div className='container-image'>
+                        <video  className='video__Red-Cow' controls poster={videoDetails.image}>Your browwser does not support the video tag</video>
+                    </div>
+                    <hr className='breakpoint-desktop' />
+                    {/* <div className='comments-breakpoint'> */}
+                        <div className='comment'>
+                        <h1>{videoDetails.title}</h1>
+                        <div className='divider'>&nbsp;</div>
+                    </div>   
+                </main>
+            <div>
+            <DisplayComments />
+            </div>    
+            <div>
+            <Comments
+                video={videoDetails}/>
             </div>
-            <div className='commentator-div'>
-                <h4 className='commentator-font '>{date}</h4>
+            <div>
+                <NextVideo videos={filteredVideos}selectVideo={handleSelectVideo}/>
             </div>
-            
-            <div className='commentator-div commentator-img'>
-                <img className='commmentator-likes' src={likes} alt='likes'  />
-                <h4 className='commentator-font'>{videoDetails.likes}</h4>    
-            </div>
-            
-        </div>
-        <div className='divider'>&nbsp;</div>
-        <div className='video-commentary'>
-            <p className='video-commentary__paragraph'>{videoDetails.description}
-            </p>
-        </div>
-        <div>
-        <h4 className='comments-number'>{videoDetails.comments.length} comments</h4> 
-        </div>
-        <Comments
-        video={videoDetails}
-        /></div>
-        <NextVideo 
-        videos={filteredVideos}
-        selectVideo={handleSelectVideo}
-        /></div>
         </>
-        );
-    }
+
+        
+    );
+}
 
 export default Body;

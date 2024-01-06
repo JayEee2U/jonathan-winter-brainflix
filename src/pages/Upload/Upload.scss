@@ -18,6 +18,10 @@
     margin: 0px auto;
 }
 
+.divider-mobile__breakpoint {
+    display: none;
+}
+
 input {
     @include partials.input;
     width: 90vw;

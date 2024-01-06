@@ -2,6 +2,7 @@ import Header from "../../components/Component/Header/Header";
 import VideoPreview from "../../assets/images/Upload-video-preview.jpg";
 import './Upload.scss';
 
+
 function Upload() {
     return (
         <>
@@ -10,6 +11,7 @@ function Upload() {
         <main className="upload-section">
             <section className="video-upload__1">
                 <h1>Upload Video</h1> 
+                <div className='divider-mobile__breakpoint'>&nbsp;</div>
                 <div className="video-image__div">
                     <h5>VIDEO THUMBNAIL</h5>
                     <img className="video-thumbnail" 
@@ -30,6 +32,7 @@ function Upload() {
                     placeholder='Add a description to your video'>
                     </textarea>    
                 </div>
+                <div className='divider-mobile__breakpoint'>&nbsp;</div>
                 <div className='publish-button'>
                     <button type='button'>
                     PUBLISH</button>

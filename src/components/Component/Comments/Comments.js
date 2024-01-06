@@ -38,8 +38,6 @@ function Comments({video}) {
         <div className="divider">&nbsp;</div>
         </>
       ))}
-      
-     
     </>
   );
 }
