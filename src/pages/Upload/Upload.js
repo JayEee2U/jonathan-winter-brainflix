@@ -1,17 +1,29 @@
 import Header from "../../components/Component/Header/Header";
 import VideoPreview from "../../assets/images/Upload-video-preview.jpg";
 import './Upload.scss';
+import { Link } from "react-router-dom";
+import { useState } from 'react'
+
+
 
 
 function Upload() {
+
+    const [uploadSuccessful, setUploadSuccessful] = useState(false)
+
+    const handleUpload = (e) => {
+
+        setUploadSuccessful(true)
+    }
+
     return (
         <>
         <Header />
         <div className='divider'>&nbsp;</div>
         <main className="upload-section">
-            <section className="video-upload__1">
                 <h1>Upload Video</h1> 
                 <div className='divider-mobile__breakpoint'>&nbsp;</div>
+            <section className="video-upload__1">
                 <div className="video-image__div">
                     <h5>VIDEO THUMBNAIL</h5>
                     <img className="video-thumbnail" 
@@ -33,14 +45,27 @@ function Upload() {
                     </textarea>    
                 </div>
                 <div className='divider-mobile__breakpoint'>&nbsp;</div>
-                <div className='publish-button'>
-                    <button type='button'>
-                    PUBLISH</button>
+                {
+                  uploadSuccessful? (
+                    <div className='success-button'>
+                    <div>UPLOAD SUCCESSFUL</div>
+                    <Link to={'/'}>
+                        <button type='button'>OK</button>
+                    </Link>
                 </div>
-                <div className='cancel-button'>
-                    <button type='button'>
-                    CANCEL</button>
-                </div>
+                  )  : (
+                    <>
+                        <div className='publish-button'>
+                            <button onClick={handleUpload} type='button'>
+                            PUBLISH</button>
+                        </div>
+                        <div className='cancel-button'>
+                            <button type='button'>
+                            CANCEL</button>
+                        </div>
+                    </>
+                 )
+                }
             </section>
         </main>
         </>

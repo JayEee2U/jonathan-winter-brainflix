@@ -4,15 +4,16 @@ import CommentDetails from '../CommentDetails/CommentDetails';
 import Comments from '../Comments/Comments';
 import axios from 'axios'
 
-// "api_key": "da04b08a-6430-435f-8c66-a8d95bdeaaa2"
+// "api_key": a17db974-718e-478d-9ac6-501d706d447b"
 
 function VideoDetails({videoId}) {
 
     const [videoDetails, setVideoDetails] = useState(null);
-
+// console.log(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=a17db974-718e-478d-9ac6-501d706d447b`)
     useEffect(() =>{
+        console.log(videoId)
         const getVideo = async () => {
-            const response = await axios.get(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=da04b08a-6430-435f-8c66-a8d95bdeaaa2`)
+            const response = await axios.get(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=a17db974-718e-478d-9ac6-501d706d447b`);
             setVideoDetails(response.data);
         }
         getVideo();

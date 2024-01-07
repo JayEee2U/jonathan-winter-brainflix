@@ -1,6 +1,35 @@
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 1280px;
+@mixin breakpoint($point) {
+    @if $point == tablet {
+        @media (min-width: 768px) { @content; }
+    }
+    @else if $point == desktop {
+        @media (min-width: 1280px) { @content; }
+    }
+}
 
+
+// $breakpoints: (
+//     'tablet': 767px,
+//     'desktop': 1280px,
+// )   !default;
+
+// @mixin respond-to($breakpoint) {
+//     // If the key exists in the map
+//     @if map-has-key($breakpoints, $breakpoint) {
+//       // Prints a media query based on the value
+//       @media (min-width: map-get($breakpoints, $breakpoint)) {
+//         body {
+//             background-color: red;
+//         }
+//       }
+//     }
+   
+//     // If the key doesn't exist in the map
+//     @else {
+//       @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+//           + "Available breakpoints are: #{map-keys($breakpoints)}.";
+//     }
+//   }
 
 @mixin avatar {
     height: 35px;

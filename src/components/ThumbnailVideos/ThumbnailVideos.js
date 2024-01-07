@@ -1,10 +1,11 @@
 import "./ThumbnailVideos.scss";
+import { Link } from "react-router-dom";
 
 
 function ThumbnailVideo({v}) {
   return (
     <>
-    <a href={`/video/${v.id}`}>
+    <Link to={`/video/${v.id}`}>
         <div className="video-section" >
       <div className="next-video__div">
         <img className="next-video__image" src={v.image} alt="" />
@@ -14,7 +15,7 @@ function ThumbnailVideo({v}) {
         <h4 className="video-channel">{v.channel}</h4>
       </div>
         </div>
-        </a>
+        </Link>
     </>
     
   );

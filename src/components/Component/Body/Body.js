@@ -1,17 +1,19 @@
 import "./Body.scss";
 import Comments from "../Comments/Comments";
 import NextVideo from "../NextVideo/NextVideo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "../Header/Header";
 import DisplayComments from "../DisplayComments/DisplayComments";
 import CommentDetails from "../CommentDetails/CommentDetails";
 import { useParams } from "react-router-dom";
 import VideoDetails from "../VideoDetails/VideoDetails";
-
+import axios from 'axios'
 // "api_key": "da04b08a-6430-435f-8c66-a8d95bdeaaa2"
 
 function Body() {
   const [videos, setVideos] = useState([]);
+
+ 
   
   const { videoId } = useParams();
 
@@ -21,15 +23,19 @@ function Body() {
 
   const filteredVideos = videos.filter((video) => video.id !== videoIdToDisplay);
 
+  
 
-  if(videos === null){
-    return <div>Loading...</div>
-}
-//   function handleSelectVideo(videoId) {
-//     console.log("handleSelectVideo", videoId);
-//     const foundVideo = videoDetailsData.find((video) => video.id === videoId);
-//     setVideoDetails(foundVideo);
-//   }
+    useEffect(()=>{
+        const getVideos = async ()=> {
+            const response = await axios.get(`https://project-2-api.herokuapp.com/videos/?api_key=a17db974-718e-478d-9ac6-501d706d447b`);
+            setVideos(response.data)
+        }
+        getVideos()
+    },[]);
+
+    if(!videoIdToDisplay){
+        return <div>Loading...</div>
+    }
 
   return (
     <>
