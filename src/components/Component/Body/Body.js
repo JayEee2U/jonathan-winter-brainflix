@@ -42,12 +42,15 @@ function Body() {
       <div>
         <Header />
       </div>
-     <div>
-        <VideoDetails videoId={videoIdToDisplay}/>
-     </div>
-      <div>
-        <NextVideo videos={filteredVideos}  />
+      <div className="desktop-breakpoint">
+        <div>
+          <VideoDetails videoId={videoIdToDisplay}/>
+        </div>
+        <div>
+          <NextVideo videos={filteredVideos}  />
+        </div>
       </div>
+
     </>
   );
 }

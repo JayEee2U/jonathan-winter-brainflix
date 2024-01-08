@@ -62,6 +62,14 @@ h1 {
         padding-right: 4vw;
     }
 
+    @include partials.breakpoint(desktop) {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0;
+        padding-left: 0;
+        padding-right: 4vw;
+    }
+
     h4 {
         display: inline;
         margin: auto 0;
@@ -72,7 +80,7 @@ h1 {
     }
 
     h4.commentator-font {
-        color: #AFAFAF;
+        color: $primary-silver;
         font-weight: 400;
 
         @include partials.breakpoint(desktop) {
@@ -124,7 +132,7 @@ h1 {
 
 
 .divider {
-    border-bottom:  1px solid #E1E1E1;
+    border-bottom:  1px solid $secondary-mercury;
     width:  90vw;
     height: .063rem;
     margin: 0px auto;
@@ -151,4 +159,10 @@ h1 {
 
 .commentSection {
     @include partials.padding;
+}
+
+.desktop-breakpoint {
+    @include partials.breakpoint(desktop) {
+        display: flex
+    }
 }

@@ -19,25 +19,30 @@ function Upload() {
     return (
         <>
         <Header />
-        <div className='divider'>&nbsp;</div>
+        <div className='divider-header__breakpoint'>&nbsp;</div>
         <main className="upload-section">
                 <h1>Upload Video</h1> 
                 <div className='divider-mobile__breakpoint'>&nbsp;</div>
             <section className="video-upload__1">
+                <div className="upload-breakpoint__desktop">
                 <div className="video-image__div">
                     <h5>VIDEO THUMBNAIL</h5>
                     <img className="video-thumbnail" src={VideoPreview} alt="Upload Video Preview" />
                 </div>
-                <div  className='video-title'>
-                    <h5>TITLE YOUR VIDEO</h5>
-                    <input className="video-title__input" type="text"  name="name" placeholder='Add a title to your video'>
-                    </input>    
+                <section className="video-details__input">
+                    <div  className='video-title'>
+                        <h5>TITLE YOUR VIDEO</h5>
+                        <input className="video-title__input" type="text"  name="name" placeholder='Add a title to your video'>
+                        </input>    
+                    </div>
+                    <div  className='video-description'>
+                        <h5>ADD A VIDEO DESCRIPTION</h5>
+                        <textarea className="text-description" type="text"  name="name" placeholder='Add a description to your video'>
+                        </textarea>    
+                    </div>
+                </section>
                 </div>
-                <div  className='video-description'>
-                    <h5>ADD A VIDEO DESCRIPTION</h5>
-                    <textarea className="text-description" type="text"  name="name" placeholder='Add a description to your video'>
-                    </textarea>    
-                </div>
+                
                 <div className='divider-mobile__breakpoint'>&nbsp;</div>
                 {
                   uploadSuccessful? (

@@ -9,7 +9,17 @@ h1 {
 }
 
 .divider {
-    @include partials.divider;
+    @include partials.breakpoint(mobile) {
+        @include partials.divider;
+    }
+
+    @include partials.breakpoint(tablet) {
+        @include partials.divider;
+    }
+    
+    @include partials.breakpoint(desktop) {
+        @include partials.divider;
+    }
 }
 
 .new-comment__section {

@@ -4,11 +4,14 @@
 
 .upload-section {
     padding: 5vw;
-    width: 50%;
-
+    
     @include partials.breakpoint(tablet) {
         width: 91vw;
     }  
+
+    @include partials.breakpoint(desktop) {
+        padding:  3vw 9vw;
+    } 
 
     h1 {
         padding: 0;
@@ -20,28 +23,45 @@
     }
 }
 
-.divider {
-    @include partials.divider
+.divider-header__breakpoint {
+    @include partials.breakpoint(mobile){
+        @include partials.divider;
+    }
+    
+    @include partials.breakpoint(tablet) {
+        @include partials.divider;
+    }
+
+    @include partials.breakpoint(desktop) {
+        @include partials.divider;
+    }
 }
 
 .divider-mobile__breakpoint {
-    border-bottom:  1px solid $secondary-mercury;
-        width:  100vw;
-        height: .063rem;
-        margin: 0px auto;
+    @include partials.breakpoint(mobile) {
+        display: none;
+    }
 
     @include partials.breakpoint(tablet) {
-        border-bottom:  1px solid $secondary-mercury;
-        width:  100vw;
-        height: .063rem;
-        margin: 0px auto;
-    }   
+        @include partials.divider;
+        width: 90vw;
+    }
+
+    @include partials.breakpoint(desktop) {
+        @include partials.divider;
+        width: 100%;
+    }
+}
+
+.upload-bar {
+    @include partials.breakpoint(mobile) {
+    }
 }
 
 input {
     @include partials.input;
     width: 90vw;
-    height: 40px;
+    height: 50px;
     
     .video-title__input {
         width: 90vw;
@@ -54,8 +74,16 @@ input {
         width: 90vw;
         background-image: url(../../assets/images//publish.svg);
 
+        button:hover {
+            background-color: $secondary-darkblue;
+        }
+
         @include partials.breakpoint(tablet) {
             width: 25vw;
+        }
+
+        @include partials.breakpoint(desktop) {
+            width: 15vw;
         }
     }
 }
@@ -79,6 +107,10 @@ input {
         @include partials.breakpoint(tablet) {
             width: 25vw;
         }
+
+        @include partials.breakpoint(desktop) {
+            width: 15vw;
+        }
     }
 }
 
@@ -86,6 +118,11 @@ input {
     object-fit: contain;
     width: 90vw;
     height: 25%;
+
+    @include partials.breakpoint(desktop){
+        width: 40%;
+        height: 90%;
+    }
 
     .video-thumbnail {
         width: 100%;
@@ -95,7 +132,17 @@ input {
         @include partials.breakpoint(tablet){
             width: 50%;
         }
+
+        @include partials.breakpoint(desktop){
+            width: 95%;
         }
+    }
+}
+
+.video-title__input {
+    @include partials.breakpoint(desktop){
+        width: 100%;
+    }
 }
 
 .text-description {
@@ -103,13 +150,39 @@ input {
     width: 90vw;
     height: 16vh;
     
+    @include partials.breakpoint(desktop){
+        width: 100%;
+    }
+}
+
+.video-description {
+    @include partials.breakpoint(desktop){
+        margin-bottom: .825rem;
+    }
+}
+
+.video-details__input {
+    @include partials.breakpoint(desktop){
+        width: 65%;
+    }
+}
+
+.upload-breakpoint__desktop {
+    @include partials.breakpoint(desktop){
+        display: flex;
+        // padding-bottom: 5px;
+    }
 }
 
 .button-breakpoint__div {
     @include partials.breakpoint(tablet) {
         display: flex;
         flex-direction: row-reverse;
+    }
 
+    @include partials.breakpoint(desktop) {
+        display: flex;
+        flex-direction: row-reverse;
     }
 }
 
@@ -120,6 +193,5 @@ input {
         @include partials.button; 
         width: 90vw;
         font-weight: bold;
-        
     }
 }

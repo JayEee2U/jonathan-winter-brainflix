@@ -1,3 +1,5 @@
+@import '../partials/_colors';
+
 @mixin breakpoint($point) {
     @if $point == mobile {
         @media (max-width: 767px) {
@@ -17,7 +19,7 @@
 }
 
 @mixin divider {
-    border-bottom:  1px solid #E1E1E1;
+    border-bottom:  1px solid $secondary-mercury;
     width:  100vw;
     height: .063rem;
     margin: 0px auto;
@@ -29,7 +31,7 @@
     border-radius: 50%;
 }
 @mixin heading {
-    color: #AFAFAF;
+    color: $primary-silver;
 }
 
 @mixin padding {
@@ -40,8 +42,8 @@
 @mixin button {
     background-repeat: no-repeat;
     background-position: left 3% center;
-    background-color: #0095FF;
-    color: #FFFFFF;
+    background-color: $primary-blue;
+    color: $primary-white;
     text-decoration: none;
     border: none;
     border-radius: 5px;
@@ -52,9 +54,10 @@
 }
 
 @mixin input {
-    background-color: #E1E1E1;
+    background-color: $secondary-mercury;
     border: 1px solid rgba(0, 0, 0, 0.2);
     background-position: left .5% center;
     border-radius: 5px;
 }
+
 

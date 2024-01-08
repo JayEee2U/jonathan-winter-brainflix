@@ -16,6 +16,12 @@
         width: 100%;
     }
 
+    @include partials.breakpoint(desktop) {
+        background-color:$secondary-darkblack;
+        margin: 0;
+        width: 100%;
+    }
+
     .video__Red-Cow {
         @include partials.breakpoint(mobile) {
             width: 100%;
