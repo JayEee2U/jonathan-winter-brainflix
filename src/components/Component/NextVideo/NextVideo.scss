@@ -1,6 +1,11 @@
 @use '../../../styles/partials/partials';
+@use '../../../styles/partials/_typography';
+@import '../../../styles/partials/_colors';
 
-
+.video-link {
+    text-decoration: none;
+    color: $primary-black;
+}
 
 h3.next-header {
     @include partials.heading;
@@ -67,6 +72,6 @@ h3.next-header {
     }
 
     .breakpoint-next__videos {
-        border-left: 1px solid  #E1E1E1;
+        border-left: 1px solid  $secondary-mercury;
     }
 }

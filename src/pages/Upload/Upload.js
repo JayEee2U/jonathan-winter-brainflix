@@ -26,44 +26,39 @@ function Upload() {
             <section className="video-upload__1">
                 <div className="video-image__div">
                     <h5>VIDEO THUMBNAIL</h5>
-                    <img className="video-thumbnail" 
-                    src={VideoPreview} 
-                    alt="Upload Video Preview" />
+                    <img className="video-thumbnail" src={VideoPreview} alt="Upload Video Preview" />
                 </div>
                 <div  className='video-title'>
                     <h5>TITLE YOUR VIDEO</h5>
-                    <input className="video-title__input" type="text"  
-                    name="name" 
-                    placeholder='Add a title to your video'>
+                    <input className="video-title__input" type="text"  name="name" placeholder='Add a title to your video'>
                     </input>    
                 </div>
                 <div  className='video-description'>
                     <h5>ADD A VIDEO DESCRIPTION</h5>
-                    <textarea className="text-description" type="text"  
-                    name="name" 
-                    placeholder='Add a description to your video'>
+                    <textarea className="text-description" type="text"  name="name" placeholder='Add a description to your video'>
                     </textarea>    
                 </div>
                 <div className='divider-mobile__breakpoint'>&nbsp;</div>
                 {
                   uploadSuccessful? (
-                    <div className='success-button'>
-                    <div>UPLOAD SUCCESSFUL</div>
+                <div className='success-button'>
+                    {/* <div>UPLOAD SUCCESSFUL</div> */}
                     <Link to={'/'}>
-                        <button type='button'>OK</button>
+                        <button type='button'>UPLOAD SUCCESSFUL! - CLICK TO RETURN TO MAIN PAGE</button>
                     </Link>
                 </div>
                   )  : (
-                    <>
+                    <section className="button-breakpoint__div">
                         <div className='publish-button'>
                             <button onClick={handleUpload} type='button'>
                             PUBLISH</button>
                         </div>
                         <div className='cancel-button'>
-                            <button type='button'>
-                            CANCEL</button>
+                            <Link to={'/'}>
+                                <button type='button'>CANCEL</button>
+                            </Link>
                         </div>
-                    </>
+                    </section>
                  )
                 }
             </section>

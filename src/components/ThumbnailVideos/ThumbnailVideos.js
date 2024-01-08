@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function ThumbnailVideo({v}) {
   return (
     <>
-    <Link to={`/video/${v.id}`}>
+    <Link className="video-link" to={`/video/${v.id}`}>
         <div className="video-section" >
       <div className="next-video__div">
         <img className="next-video__image" src={v.image} alt="" />
