@@ -1,0 +1,9 @@
+@use  '../../styles/partials/_partials';
+@use '../../styles/partials/_typography';
+@import '../../styles/partials/_colors';
+
+
+.divider {
+    @include partials.divider;
+}
+

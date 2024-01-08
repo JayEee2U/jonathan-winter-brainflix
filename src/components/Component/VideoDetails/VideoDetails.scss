@@ -1,3 +1,49 @@
 @use '../../../styles/partials/_partials';
-@use '../../../styles/partials/_colors';
 @use '../../../styles/partials/_typography';
+@import '../../../styles/partials/_colors';
+
+
+.container-image {
+    @include partials.breakpoint(mobile) {
+        object-fit: contain;
+        width: 100vw;
+        height: 20%;
+    }
+    
+    @include partials.breakpoint(tablet) {
+        background-color:$secondary-darkblack;
+        margin: 0;
+        width: 100%;
+    }
+
+    .video__Red-Cow {
+        @include partials.breakpoint(mobile) {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+        }
+        
+        @include partials.breakpoint(tablet) {
+            width: 90%;
+            margin-left: 5%;
+        }
+
+        @include partials.breakpoint(desktop) {
+            width: 70vw;
+            margin-left: 14%;
+            margin-right: 5%;
+        }
+    }
+}
+
+.comment {
+    @include partials.breakpoint(tablet) {
+
+        .commentator-img {
+            @include partials.breakpoint(tablet) {
+                order: 4;
+                width: 8vw;
+            }
+        }
+    }
+}

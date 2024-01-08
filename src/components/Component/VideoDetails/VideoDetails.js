@@ -3,6 +3,7 @@ import DisplayComments from '../DisplayComments/DisplayComments';
 import CommentDetails from '../CommentDetails/CommentDetails';
 import Comments from '../Comments/Comments';
 import axios from 'axios'
+import './VideoDetails.scss'
 
 // "api_key": a17db974-718e-478d-9ac6-501d706d447b"
 
@@ -25,7 +26,7 @@ function VideoDetails({videoId}) {
 
   return (
     <>
-      <main>
+      <main className='main-margin'>
         <div className="container-image">
           <video
             className="video__Red-Cow"
@@ -35,7 +36,7 @@ function VideoDetails({videoId}) {
             Your browwser does not support the video tag
           </video>
         </div>
-        <hr className="breakpoint-desktop" />
+        <div className="breakpoint-desktop" />
         {/* <div className='comments-breakpoint'> */}
         <div className="comment">
           <h1>{videoDetails.title}</h1>

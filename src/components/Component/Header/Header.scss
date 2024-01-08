@@ -1,4 +1,6 @@
 @use '../../../styles/partials/_partials';
+@use '../../../styles/partials/_typography';
+@import '../../../styles/partials/_colors';
 
 .NavBar {
     display: flex;
@@ -13,12 +15,11 @@
         background-image: url(../../../assets/images/search.svg);
         background-repeat: no-repeat;
         padding-left: .625rem;
-        background-origin: content-box;
-        
+        background-origin: content-box;   
     }
 
     input::placeholder {
-        color: #323232;
+        color: $primary-black;
         padding-left: 30px;
     }
 
@@ -47,17 +48,13 @@
     }
 
     button:hover {
-        background-color: #0065AD;
+        background-color: $secondary-darkblue;
     }
 }
-
-
 
 h1 {
     padding: 0 5vw;
 }
-
-
 
 @media screen  and (min-width: 768px) {
     

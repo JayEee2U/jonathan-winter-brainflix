@@ -5,10 +5,7 @@ import './Header.scss'
 import { Link } from 'react-router-dom'
 
 function Header() {
-    // const upload = () => {
 
-    
-    
     return (
         <header>
             <main className='NavBar'>

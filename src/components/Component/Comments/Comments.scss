@@ -1,4 +1,16 @@
 @use  '../../../styles/partials/_partials';
+@use '../../../styles/partials/_typography';
+@import '../../../styles/partials/_colors';
+
+h1 {
+    @include partials.breakpoint(desktop) {
+        padding-left: 4vw;
+    }
+}
+
+.divider {
+    @include partials.divider;
+}
 
 .new-comment__section {
     @include partials.padding;
@@ -33,7 +45,7 @@
         }
 
         button:hover {
-            background-color: #0065AD;
+            background-color:$secondary-darkblue;
         }
 
     }
@@ -45,7 +57,7 @@
     }
 
     input::placeholder {
-        color: #323232;
+        color: $primary-black;
         padding-left: 40px;
         
 
@@ -71,7 +83,7 @@
         height: 2.25rem;
         width: 2.25rem;
         border-radius: 50%;
-        background-color: #E1E1E1;
+        background-color: $secondary-mercury;
     }
 
     .comment-name__date {
@@ -81,15 +93,15 @@
 
     .comment-timestamp {
         font-weight: 100;
-        color: #AFAFAF;
+        color: $primary-silver;
     }
 }
 
 @media screen  and (min-width: 768px) {
 
-    h1 {
-        padding-left: 4vw;
-    }
+    // h1 {
+    //     padding-left: 4vw;
+    // }
 
     .new-comment__section {
         width: 93vw;
