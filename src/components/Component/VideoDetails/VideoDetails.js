@@ -31,7 +31,7 @@ function VideoDetails({videoId}) {
           <video
             className="video__Red-Cow"
             controls
-            poster={videoDetails.image}
+            poster={videoDetails.image} width="100%" height="100%"
           >
             Your browwser does not support the video tag
           </video>

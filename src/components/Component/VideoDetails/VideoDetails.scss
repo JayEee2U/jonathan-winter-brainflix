@@ -6,14 +6,16 @@
 .container-image {
     @include partials.breakpoint(mobile) {
         object-fit: contain;
-        width: 100vw;
-        height: 20%;
+        width: 100%;
+        height: 100%;
     }
     
     @include partials.breakpoint(tablet) {
         background-color:$secondary-darkblack;
         margin: 0;
         width: 100%;
+        height: 100%;
+        position: relative;
     }
 
     @include partials.breakpoint(desktop) {
