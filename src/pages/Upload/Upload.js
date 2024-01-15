@@ -3,17 +3,39 @@ import VideoPreview from "../../assets/images/Upload-video-preview.jpg";
 import './Upload.scss';
 import { Link } from "react-router-dom";
 import { useState } from 'react'
+import axios from "axios";
 
 
 
 
 function Upload() {
 
-    const [uploadSuccessful, setUploadSuccessful] = useState(false)
+    const [uploadSuccessful, setUploadSuccessful] = useState(false);
+    const [uploadTitle, setUploadTitle] = useState('');
+    const [uploadDescription, setUploadDescription] = useState('');
 
-    const handleUpload = (e) => {
+    const handleUpload = async (e) => {
+        console.log("handleUpload");
+        const videoData = {
+            title: uploadTitle,
+            image: './public/images/test.jpg',
+            description: uploadDescription
+        }
+        const response = await axios.post('http://localhost:8084/videos', videoData);
+        console.log(response.data)
+        setUploadSuccessful(true);
+        }
 
-        setUploadSuccessful(true)
+    
+
+    const handleTitleChange = (e) => {
+
+        setUploadTitle(e.target.value)
+    }
+
+    const handleDescriptionChange = (e) => {
+
+        setUploadDescription(e.target.value)
     }
 
     return (
@@ -32,12 +54,12 @@ function Upload() {
                 <section className="video-details__input">
                     <div  className='video-title'>
                         <h5>TITLE YOUR VIDEO</h5>
-                        <input className="video-title__input" type="text"  name="name" placeholder='Add a title to your video'>
+                        <input onChange={handleTitleChange} className="video-title__input" type="text"  name="name" placeholder='Add a title to your video'>
                         </input>    
                     </div>
                     <div  className='video-description'>
                         <h5>ADD A VIDEO DESCRIPTION</h5>
-                        <textarea className="text-description" type="text"  name="name" placeholder='Add a description to your video'>
+                        <textarea onChange={handleDescriptionChange} className="text-description" type="text"  name="name" placeholder='Add a description to your video'>
                         </textarea>    
                     </div>
                 </section>
